@@ -77,7 +77,7 @@ DEVILBOX_PATH=.
 ### b.) If an IP is specified, note the trailing colon ':'
 ###    LOCAL_LISTEN_ADDR=127.0.0.1:
 ###
-LOCAL_LISTEN_ADDR=
+LOCAL_LISTEN_ADDR=127.0.0.1:
 
 
 ###
@@ -95,7 +95,7 @@ LOCAL_LISTEN_ADDR=
 ###   TLD_SUFFIX=local
 ### Makes your project available under xxxx.local
 ###
-TLD_SUFFIX=loc
+TLD_SUFFIX=local.cat
 
 
 ###
@@ -129,14 +129,14 @@ EXTRA_HOSTS=
 ###
 ### Type `id` on the terminal to find out your values
 ###
-NEW_UID=1000
-NEW_GID=1000
+NEW_UID=673187892
+NEW_GID=673186305
 
 
 ###
 ### Timezone for PHP Docker container (system and php.ini)
 ###
-TIMEZONE=CEST
+TIMEZONE=UTC
 
 
 
@@ -415,7 +415,7 @@ MOUNT_OPTIONS=
 ###
 ### $ docker-compose rm -f
 ###
-HOST_PATH_HTTPD_DATADIR=./data/www
+HOST_PATH_HTTPD_DATADIR=../dev_vm
 
 ### Local filesystem path to projects relative to $HOME/
 HOST_PATH_RELATIVE_DATADIR=dev_vm
@@ -477,7 +477,7 @@ HOST_PORT_HTTPD_SSL=443
 ###
 ### When changing this value, restart the devilbox.
 ###
-HTTPD_DOCROOT_DIR=htdocs
+HTTPD_DOCROOT_DIR=html
 
 
 ###
