@@ -136,7 +136,7 @@ NEW_GID=1000
 ###
 ### Timezone for PHP Docker container (system and php.ini)
 ###
-TIMEZONE=UTC
+TIMEZONE=CEST
 
 
 
@@ -271,8 +271,8 @@ PHP_SERVER=7.2
 ### 1.2 Choose HTTPD Server Image
 ###
 #HTTPD_SERVER=apache-2.2
-#HTTPD_SERVER=apache-2.4
-HTTPD_SERVER=nginx-stable
+HTTPD_SERVER=apache-2.4
+#HTTPD_SERVER=nginx-stable
 #HTTPD_SERVER=nginx-mainline
 
 
@@ -281,13 +281,13 @@ HTTPD_SERVER=nginx-stable
 ###
 #MYSQL_SERVER=mysql-5.5
 #MYSQL_SERVER=mysql-5.6
-#MYSQL_SERVER=mysql-5.7
+MYSQL_SERVER=mysql-5.7
 #MYSQL_SERVER=mysql-8.0
 #MYSQL_SERVER=mariadb-5.5
 #MYSQL_SERVER=mariadb-10.0
 #MYSQL_SERVER=mariadb-10.1
 #MYSQL_SERVER=mariadb-10.2
-MYSQL_SERVER=mariadb-10.3
+#MYSQL_SERVER=mariadb-10.3
 #MYSQL_SERVER=mariadb-10.4
 #MYSQL_SERVER=percona-5.5
 #MYSQL_SERVER=percona-5.6
@@ -417,6 +417,8 @@ MOUNT_OPTIONS=
 ###
 HOST_PATH_HTTPD_DATADIR=./data/www
 
+### Local filesystem path to projects relative to $HOME/
+HOST_PATH_RELATIVE_DATADIR=dev_vm
 
 
 ################################################################################
