@@ -1,14 +1,16 @@
 #!/bin/bash
 
 declare -A repos
+#repos[linkat]="gitlab.ticxcat.cat/ENS/1060/portal_linkat.git"
 repos[linkat]="git.intranet.gencat.cat/1063/Linkat.git"
-repos[agora]="git.intranet.gencat.cat/1051/Agora.git"
+#repos[agora]="git.intranet.gencat.cat/1051/Agora.git"
 
 homedir=`pwd`
 devdir="$homedir/../../dev_vm"
 
 function clone_project {
     #Exemple de giturl: https://12345678A@git.intranet.gencat.cat/1063/Linkat.git
+    #Exemple de giturl: https://usuari.cognom@gitlab.ticxcat.cat/ENS/1148/portal.git
     user=$1
     project=$2
     giturl="https://"$user"@"${repos[$2]}
@@ -43,6 +45,14 @@ else
     project=$2
 fi
 
+# Check devilbox install
+cp --no-clobber ../env-example ../.env
+cp --no-clobber ../docker-compose.override.yml-example ../docker-compose.override.yml
+cp --no-clobber ../cfg/php-ini-5.3/php.ini-dist ../cfg/php-ini-5.3/php.ini
+
+# Get user argument
 user=$1
 
+# Clone projects
 clone_project "${user}" "${project}"
+
